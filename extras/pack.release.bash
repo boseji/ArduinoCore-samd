@@ -1,5 +1,5 @@
 #!/bin/bash -ex
-
+set -e
 #  pack.*.bash - Bash script to help packaging samd core releases.
 #  Copyright (c) 2015 Arduino LLC.  All right reserved.
 #  Modifications for SAM15X15 - Copyright (c) 2020 Abhijit Bose <https://boseji.com>
@@ -17,7 +17,7 @@
 #  You should have received a copy of the GNU Lesser General Public
 #  License along with this library; if not, write to the Free Software
 #  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-
+API_VERSION='1.2.0'
 VERSION=`grep version= platform.txt | sed 's/version=//g'`
 NAME=`grep name= platform.txt| sed 's/name=//g' |sed 's/[.| ]/_/g'`
 
@@ -27,6 +27,13 @@ THIS_SCRIPT_NAME=`basename $0`
 ARCHIVE="${NAME}_${VERSION}.tar.bz2"
 EXCLUDE="--exclude=extras/** --exclude=.git* --exclude=.idea --exclude=original*.txt"
 
+# Get the Latest API inputs
+wget -O api.tar.gz https://github.com/arduino/ArduinoCore-API/archive/$API_VERSION.tar.gz
+tar -xzvf api.tar.gz ArduinoCore-API-$API_VERSION/api --strip-components=1
+rm -rf api.tar.gz
+mv api cores/arduino/
+
+# Clean up the Archive
 rm -f samd-$VERSION.tar.bz2
 
 cd ..
@@ -50,3 +57,5 @@ sed s/%%FILENAME%%/${ARCHIVE}/ |
 sed s/%%CHECKSUM%%/${CHKSUM}/ |
 sed s/%%SIZE%%/${SIZE}/ > package_avdweb_nl_pre_release_index.json
 mv *.json ..
+# Remove API
+rm -rf $PWD/cores/arduino/api
