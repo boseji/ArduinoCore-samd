@@ -1,27 +1,25 @@
 {
   "packages": [
     {
-      "name": "avdweb.nl boards",
-      "maintainer": "avdweb.nl",
-      "websiteURL": "http://www.avdweb.nl/arduino/samd21/sam-15x15.html",
-      "email": "a@maxun.cc",
+      "name": "boseji.com MCU-JUGAAD SAMD Boards",
+      "maintainer": "boseji.com",
+      "websiteURL": "http://www.boseji.com/",
+      "email": "packages@boseji.com",
       "help": {
-        "online": "http://www.avdweb.nl/arduino/samd21/sam-15x15.html"
+        "online": "https://github.com/boseji/jugaad_boards"
       },
       "platforms": [
         {
-          "name": "avdweb.nl SAM15X15 SAMD Boards",
+          "name": "boseji.com MCU-JUGAAD SAMD21 Boards",
           "architecture": "samd",
           "version": "%%VERSION%%",
           "category": "Contributed",
-          "url": "%%REPOURL%%/raw/%%BRANCHNAME%%/%%FILENAME%%",
+          "url": "https://github.com/boseji/jugaad_boards/raw/%%BRANCHNAME%%/bm/%%FILENAME%%",
           "archiveFileName": "%%FILENAME%%",
           "checksum": "SHA-256:%%CHECKSUM%%",
           "size": "%%SIZE%%",
           "boards": [
-            {
-              "name": "SAMD21"
-            }
+            { "name": "mcu-jugaad SAMD21G V1" }
           ],
           "toolsDependencies": [
             {

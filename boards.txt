@@ -16,41 +16,41 @@
 
 menu.crystalsel=Crystal Selection
 
-# SAM 15x15 (only native USB port)
+# mcu-jugaad SAMD21G V1 (only native USB port)
 # --------------------------------------
-sam15x15.name=SAMD21
-sam15x15.vid.0=0x2341
-sam15x15.pid.0=0x804d
-sam15x15.vid.1=0x2341
-sam15x15.pid.1=0x004d
-sam15x15.vid.2=0x2341
-sam15x15.pid.2=0x824d
-sam15x15.vid.3=0x2341
-sam15x15.pid.3=0x024d
+mcu_jugaad_samd21g_v1.name=mcu-jugaad SAMD21G V1
+mcu_jugaad_samd21g_v1.vid.0=0x2341
+mcu_jugaad_samd21g_v1.pid.0=0x804d
+mcu_jugaad_samd21g_v1.vid.1=0x2341
+mcu_jugaad_samd21g_v1.pid.1=0x004d
+mcu_jugaad_samd21g_v1.vid.2=0x2341
+mcu_jugaad_samd21g_v1.pid.2=0x824d
+mcu_jugaad_samd21g_v1.vid.3=0x2341
+mcu_jugaad_samd21g_v1.pid.3=0x024d
 
-sam15x15.upload.tool=bossac
-sam15x15.upload.protocol=sam-ba
-sam15x15.upload.maximum_size=262144
-sam15x15.upload.maximum_data_size=32768
-sam15x15.upload.use_1200bps_touch=true
-sam15x15.upload.wait_for_upload_port=true
-sam15x15.upload.native_usb=true
-sam15x15.build.mcu=cortex-m0plus
-sam15x15.build.f_cpu=48000000L
-sam15x15.build.usb_product="Arduino Zero"
-sam15x15.build.usb_manufacturer="Arduino LLC"
-sam15x15.build.board=SAMD_ZERO
-sam15x15.build.core=arduino
-sam15x15.menu.crystalsel.withcrystal=With 32KHz Clock Crystal
-sam15x15.menu.crystalsel.withoutcrystal=Without Crystal
-sam15x15.menu.crystalsel.withoutcrystal.build.extra_flags=-DCRYSTALLESS -D__SAMD21G18A__ {build.usb_flags}
-sam15x15.menu.crystalsel.withcrystal.build.extra_flags=-D__SAMD21G18A__ {build.usb_flags}
-sam15x15.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-sam15x15.build.openocdscript=openocd_scripts/arduino_zero.cfg
-sam15x15.build.variant=sam15x15_d21
-sam15x15.build.variant_system_lib=
-sam15x15.build.vid=0x2341
-sam15x15.build.pid=0x804d
-sam15x15.bootloader.tool=openocd
-sam15x15.menu.crystalsel.withoutcrystal.bootloader.file=zero/samd21_sam_ba_crystalless.bin
-sam15x15.menu.crystalsel.withcrystal.bootloader.file=zero/samd21_sam_ba.bin
+mcu_jugaad_samd21g_v1.upload.tool=bossac
+mcu_jugaad_samd21g_v1.upload.protocol=sam-ba
+mcu_jugaad_samd21g_v1.upload.maximum_size=262144
+mcu_jugaad_samd21g_v1.upload.maximum_data_size=32768
+mcu_jugaad_samd21g_v1.upload.use_1200bps_touch=true
+mcu_jugaad_samd21g_v1.upload.wait_for_upload_port=true
+mcu_jugaad_samd21g_v1.upload.native_usb=true
+mcu_jugaad_samd21g_v1.build.mcu=cortex-m0plus
+mcu_jugaad_samd21g_v1.build.f_cpu=48000000L
+mcu_jugaad_samd21g_v1.build.usb_product="Arduino Zero"
+mcu_jugaad_samd21g_v1.build.usb_manufacturer="Arduino LLC"
+mcu_jugaad_samd21g_v1.build.board=SAMD_ZERO
+mcu_jugaad_samd21g_v1.build.core=arduino
+mcu_jugaad_samd21g_v1.menu.crystalsel.withcrystal=With 32KHz Clock Crystal
+mcu_jugaad_samd21g_v1.menu.crystalsel.withoutcrystal=Without Crystal
+mcu_jugaad_samd21g_v1.menu.crystalsel.withoutcrystal.build.extra_flags=-DCRYSTALLESS -D__SAMD21G18A__ {build.usb_flags}
+mcu_jugaad_samd21g_v1.menu.crystalsel.withcrystal.build.extra_flags=-D__SAMD21G18A__ {build.usb_flags}
+mcu_jugaad_samd21g_v1.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+mcu_jugaad_samd21g_v1.build.openocdscript=openocd_scripts/arduino_zero.cfg
+mcu_jugaad_samd21g_v1.build.variant=mcu-jugaad_SAMD21G_V1
+mcu_jugaad_samd21g_v1.build.variant_system_lib=
+mcu_jugaad_samd21g_v1.build.vid=0x2341
+mcu_jugaad_samd21g_v1.build.pid=0x804d
+mcu_jugaad_samd21g_v1.bootloader.tool=openocd
+mcu_jugaad_samd21g_v1.menu.crystalsel.withoutcrystal.bootloader.file=zero/samd21_sam_ba_crystalless.bin
+mcu_jugaad_samd21g_v1.menu.crystalsel.withcrystal.bootloader.file=zero/samd21_sam_ba.bin

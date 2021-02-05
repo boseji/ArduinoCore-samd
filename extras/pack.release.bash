@@ -3,7 +3,9 @@ set -e
 set +x
 #  pack.*.bash - Bash script to help packaging samd core releases.
 #  Copyright (c) 2015 Arduino LLC.  All right reserved.
-#  Modifications for SAM15X15 - Copyright (c) 2020 Abhijit Bose <https://boseji.com>
+#
+#  Modifications for MCU-JUGAAD SAMD Boards 
+#   - Copyright (c) 2021 Abhijit Bose <https://boseji.com>
 #
 #  This library is free software; you can redistribute it and/or
 #  modify it under the terms of the GNU Lesser General Public
@@ -58,7 +60,7 @@ sed s/%%VERSION%%/${VERSION}/ |
 sed s/%%FILENAME%%/${ARCHIVE}/ |
 sed s/%%CHECKSUM%%/${CHKSUM}/ |
 sed s/%%BRANCHNAME%%/${REPO_BRANCH}/ |
-sed s/%%SIZE%%/${SIZE}/ > package_avdweb_nl_pre_release_index.json
+sed s/%%SIZE%%/${SIZE}/ > package_boseji_com_jugaad_boards_pre_release_index.json
 mv *.json ..
 # Remove API
 rm -rf $PWD/cores/arduino/api

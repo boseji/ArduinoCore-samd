@@ -19,8 +19,8 @@
 # For more info:
 # https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5---3rd-party-Hardware-specification
 
-name=avdweb.nl SAM15X15 SAMD Boards
-version=27.0.0-Core-v1.8.11
+name=boseji.com MCU-JUGAAD SAMD21 Boards
+version=1.0.0-Core-v1.8.11
 
 # Compile variables
 # -----------------
