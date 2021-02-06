@@ -19,7 +19,8 @@
           "checksum": "SHA-256:%%CHECKSUM%%",
           "size": "%%SIZE%%",
           "boards": [
-            { "name": "mcu-jugaad SAMD21G V1" }
+            { "name": "mcu-jugaad SAMD21G V1" },
+            { "name": "Anuj v0.4 SAM21G"}
           ],
           "toolsDependencies": [
             {
